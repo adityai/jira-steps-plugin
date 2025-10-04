@@ -143,7 +143,7 @@ public interface JiraEndPoints {
   Call<Object> getProjectVersions(@Path("projectIdOrKey") String projectId);
 
   // Search
-  @POST("rest/api/2/search")
+  @POST("rest/api/3/search/jql")
   Call<Object> searchIssues(@Body Object search);
 
   // Version

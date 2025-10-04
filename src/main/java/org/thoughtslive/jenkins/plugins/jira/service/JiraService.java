@@ -293,16 +293,16 @@ public class JiraService {
   public ResponseData<Object> searchIssues(final String jql, final int startAt,
       final int maxResults, final Object fields) {
     try {
-      ImmutableMap.Builder<Object, Object> paramsMap = ImmutableMap.builder()
+      ImmutableMap.Builder<Object, Object> requestBody = ImmutableMap.builder()
           .put("jql", jql)
           .put("startAt", startAt)
           .put("maxResults", maxResults);
 
       if (fields != null) {
-        paramsMap.put("fields", fields);
+        requestBody.put("fields", fields);
       }
 
-      return parseResponse(jiraEndPoints.searchIssues(paramsMap.build()).execute());
+      return parseResponse(jiraEndPoints.searchIssues(requestBody.build()).execute());
     } catch (Exception e) {
       return buildErrorResponse(e);
     }
