@@ -11,7 +11,7 @@ jobs:
           command: mvn clean install -DskipTests
       - store_artifacts:
           path: /home/circleci/project/target/jira-steps.hpi
-          destination: artifacts
+          destination: jira-steps.hpi
       - store_artifacts:
           path: /home/circleci/project/target/jira-steps.jar
-          destination: artifacts          
+          destination: jira-steps.jar          
