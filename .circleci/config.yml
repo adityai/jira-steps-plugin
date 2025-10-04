@@ -12,3 +12,6 @@ jobs:
       - store_artifacts:
           path: target/*.hpi
           destination: artifacts
+      - store_artifacts:
+          path: target/*.jar
+          destination: artifacts          
