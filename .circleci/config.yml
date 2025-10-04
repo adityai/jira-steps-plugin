@@ -10,8 +10,8 @@ jobs:
           name: Build HPI
           command: mvn clean install -DskipTests
       - store_artifacts:
-          path: target/*.hpi
+          path: /home/circleci/project/target/jira-steps.hpi
           destination: artifacts
       - store_artifacts:
-          path: target/*.jar
+          path: /home/circleci/project/target/jira-steps.jar
           destination: artifacts          
